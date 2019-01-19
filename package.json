@@ -1,0 +1,16 @@
+{
+  "description": "An online meeting site for the academia",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/theoko/umeet.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "react": "^16.7.0"
+  }
+}
