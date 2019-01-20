@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/UI/header/header';
 import Navigation from '../components/UI/navigation/nav'
+import Footer from '../components/UI/footer/footer';
 
 class Index extends React.Component {
     constructor(props) {
@@ -31,6 +32,9 @@ class Index extends React.Component {
                             '/register',
                         ]
                     ]}
+                />
+                <Footer
+                    
                 />
             </React.Fragment>
         )
