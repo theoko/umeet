@@ -13,29 +13,32 @@ class Register extends React.Component {
     }
 
     render() {
+
+        const pages = [
+            [
+                'Home',
+                false,
+                '/',
+            ],
+            [
+                'About',
+                false,
+                '/about',
+            ],
+            [
+                'Register',
+                true,
+                '/register',
+            ]
+        ];
+
         return (
             <React.Fragment>
                 <Header
                     page={{ title: 'Register', }}
                 />
                 <Navigation
-                    pages={[
-                        [
-                            'Home',
-                            false,
-                            '/',
-                        ],
-                        [
-                            'About',
-                            false,
-                            '/about',
-                        ],
-                        [
-                            'Register',
-                            true,
-                            '/register',
-                        ]
-                    ]}
+                    pages={pages}
                 />
 
                 <div className="row">
@@ -46,7 +49,9 @@ class Register extends React.Component {
                         { card }
                     </div>
                 </div>
-                <Footer />
+                <Footer 
+                    pages={pages}
+                />
             </React.Fragment>
         )
     }

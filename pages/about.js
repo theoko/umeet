@@ -9,32 +9,35 @@ class About extends React.Component {
     }
 
     render() {
+
+        const pages = [
+            [
+                'Home',
+                false,
+                '/',
+            ],
+            [
+                'About',
+                true,
+                '/about',
+            ],
+            [
+                'Register',
+                false,
+                '/register',
+            ]
+        ];
+
         return (
             <React.Fragment>
                 <Header
                     page={{ title: 'About', }}
                 />
                 <Navigation
-                    pages={[
-                        [
-                            'Home',
-                            false,
-                            '/',
-                        ],
-                        [
-                            'About',
-                            true,
-                            '/about',
-                        ],
-                        [
-                            'Register',
-                            false,
-                            '/register',
-                        ]
-                    ]}
+                    pages={pages}
                 />
                 <Footer
-                    
+                    pages={pages}
                 />
             </React.Fragment>
         )

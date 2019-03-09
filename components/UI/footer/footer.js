@@ -3,9 +3,22 @@ import React from 'react';
 class Footer extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            links: this.props.pages,
+        }
     }
 
     render() {
+
+        const links = this.state.links.map((page) => {
+                return (
+                    <li>
+                        <a style={{ color: '#e57373' }} href={page[2]} key={page[0]}>{page[0]}</a>
+                    </li>
+                )
+            });
+
         return (
             <footer className="page-footer white">
                 <div className="container">
@@ -17,10 +30,7 @@ class Footer extends React.Component {
                         <div className="col l4 offset-l2 s12">
                             <h5 style={{ color: '#e57373' }}>Links</h5>
                             <ul>
-                                <li><a style={{ color: '#e57373' }} href="#!">Link 1</a></li>
-                                <li><a style={{ color: '#e57373' }} href="#!">Link 2</a></li>
-                                <li><a style={{ color: '#e57373' }} href="#!">Link 3</a></li>
-                                <li><a style={{ color: '#e57373' }} href="#!">Link 4</a></li>
+                                {links}    
                             </ul>
                         </div>
                     </div>

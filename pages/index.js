@@ -9,32 +9,35 @@ class Index extends React.Component {
     }
 
     render() {
+
+        const pages = [
+            [
+                'Home',
+                true,
+                '/',
+            ],
+            [
+                'About',
+                false,
+                '/about',
+            ],
+            [
+                'Register',
+                false,
+                '/register',
+            ]
+        ];
+
         return (
             <React.Fragment>
                 <Header
-                    page={{ title: 'Home', }}
+                    page={{ title: 'Home' }}
                 />
                 <Navigation
-                    pages={[
-                        [
-                            'Home',
-                            true,
-                            '/',
-                        ],
-                        [
-                            'About',
-                            false,
-                            '/about',
-                        ],
-                        [
-                            'Register',
-                            false,
-                            '/register',
-                        ]
-                    ]}
+                    pages={pages}
                 />
                 <Footer
-                    
+                    pages={pages}
                 />
             </React.Fragment>
         )

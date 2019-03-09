@@ -15,7 +15,7 @@
     "child_process": "^1.0.2",
     "fs": "0.0.1-security",
     "next": "^7.0.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   }
 }

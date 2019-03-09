@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/theodore/Desktop/Umeet/umeet-site/components/UI/footer/footer.js";
+var _jsxFileName = "/Users/theoko/Desktop/umeet-project/umeet/components/UI/footer/footer.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -39,40 +39,66 @@ function (_React$Component) {
   _inherits(Footer, _React$Component);
 
   function Footer(props) {
+    var _this;
+
     _classCallCheck(this, Footer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Footer).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Footer).call(this, props));
+    _this.state = {
+      links: _this.props.pages
+    };
+    return _this;
   }
 
   _createClass(Footer, [{
     key: "render",
     value: function render() {
+      var links = this.state.links.map(function (page) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          style: {
+            color: '#e57373'
+          },
+          href: page[2],
+          key: page[0],
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
+          },
+          __self: this
+        }, page[0]));
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
         className: "page-footer white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col l6 s12",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 26
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -81,7 +107,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 27
         },
         __self: this
       }, "Footer Header"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -90,14 +116,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 28
         },
         __self: this
       }, "You can use rows and columns here to organize your footer content.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col l4 offset-l2 s12",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 30
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -106,91 +132,27 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 31
         },
         __self: this
       }, "Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 32
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          color: '#e57373'
-        },
-        href: "#!",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      }, "Link 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          color: '#e57373'
-        },
-        href: "#!",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
-      }, "Link 2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          color: '#e57373'
-        },
-        href: "#!",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      }, "Link 3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        style: {
-          color: '#e57373'
-        },
-        href: "#!",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, "Link 4")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, links)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footer-copyright",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -199,7 +161,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 40
         },
         __self: this
       }, "\xA9 2019 UMEET"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -210,7 +172,7 @@ function (_React$Component) {
         href: "#!",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 41
         },
         __self: this
       }, "More Links"))));
@@ -237,7 +199,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/home/theodore/Desktop/Umeet/umeet-site/components/UI/header/header.js";
+var _jsxFileName = "/Users/theoko/Desktop/umeet-project/umeet/components/UI/header/header.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -335,7 +297,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/theodore/Desktop/Umeet/umeet-site/components/UI/navigation/nav.js";
+var _jsxFileName = "/Users/theoko/Desktop/umeet-project/umeet/components/UI/navigation/nav.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -349,11 +311,11 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -371,7 +333,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Navigation).call(this, props));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "generateKey", function (pre) {
+    _defineProperty(_assertThisInitialized(_this), "generateKey", function (pre) {
       return "".concat(pre, "_").concat(new Date().getTime());
     });
 
@@ -460,7 +422,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/theodore/Desktop/Umeet/umeet-site/components/UI/pages/register/card.js";
+var _jsxFileName = "/Users/theoko/Desktop/umeet-project/umeet/components/UI/pages/register/card.js";
 
 var card = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
   __source: {
@@ -500,7 +462,7 @@ var card = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEB
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/theodore/Desktop/Umeet/umeet-site/components/UI/pages/register/fields.js";
+var _jsxFileName = "/Users/theoko/Desktop/umeet-project/umeet/components/UI/pages/register/fields.js";
 
 var fields = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
   __source: {
@@ -524,32 +486,135 @@ var fields = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__W
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "row",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "col s12",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
   className: "input-field",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 10
   },
   __self: undefined
 }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
   id: "email",
   type: "email",
+  placeholder: "Email",
   className: "validate",
   style: {
     color: '#e57373'
   },
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 11
   },
   __self: undefined
-}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-  htmlFor: "email",
+})))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "row",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 17
   },
   __self: undefined
-}, "Email"))));
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "col s6",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "input-field",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  id: "firstName",
+  type: "text",
+  placeholder: "First Name",
+  className: "validate",
+  style: {
+    color: '#e57373'
+  },
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 20
+  },
+  __self: undefined
+}))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "col s6",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 24
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "input-field",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 25
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  id: "lastName",
+  type: "text",
+  placeholder: "Last Name",
+  className: "validate",
+  style: {
+    color: '#e57373'
+  },
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26
+  },
+  __self: undefined
+})))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "row",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 32
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "col s12",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 33
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "input-field",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 34
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  id: "password",
+  type: "password",
+  placeholder: "New password",
+  className: "validate",
+  style: {
+    color: '#e57373'
+  },
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 35
+  },
+  __self: undefined
+}))))));
 /* harmony default export */ __webpack_exports__["default"] = (fields);
 
 /***/ }),
@@ -1800,7 +1865,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.2' };
+var core = module.exports = { version: '2.6.5' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -4989,23 +5054,23 @@ module.exports = __webpack_require__(/*! ./dist/lib/head */ "./node_modules/next
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_088020044fcad06258c8 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_088020044fcad06258c8 */ "dll-reference dll_088020044fcad06258c8"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_088020044fcad06258c8 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_088020044fcad06258c8 */ "dll-reference dll_088020044fcad06258c8"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -5613,23 +5678,23 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_088020044fcad06258c8 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_088020044fcad06258c8 */ "dll-reference dll_088020044fcad06258c8"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_831a3634f66cb1dada0c ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_088020044fcad06258c8 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_831a3634f66cb1dada0c */ "dll-reference dll_831a3634f66cb1dada0c"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_088020044fcad06258c8 */ "dll-reference dll_088020044fcad06258c8"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -6464,7 +6529,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_UI_pages_register_fields__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/UI/pages/register/fields */ "./components/UI/pages/register/fields.js");
 /* harmony import */ var _components_UI_pages_register_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/UI/pages/register/card */ "./components/UI/pages/register/card.js");
 /* harmony import */ var _components_UI_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/UI/footer/footer */ "./components/UI/footer/footer.js");
-var _jsxFileName = "/home/theodore/Desktop/Umeet/umeet-site/pages/register.js";
+var _jsxFileName = "/Users/theoko/Desktop/umeet-project/umeet/pages/register.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -6505,10 +6570,11 @@ function (_React$Component) {
   _createClass(Register, [{
     key: "render",
     value: function render() {
+      var pages = [['Home', false, '/'], ['About', false, '/about'], ['Register', true, '/register']];
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 36
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_header_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -6517,41 +6583,42 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 37
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_navigation_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        pages: [['Home', false, '/'], ['About', false, '/about'], ['Register', true, '/register']],
+        pages: pages,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 40
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 45
         },
         __self: this
       }, _components_UI_pages_register_fields__WEBPACK_IMPORTED_MODULE_3__["default"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col s6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 48
         },
         __self: this
       }, _components_UI_pages_register_card__WEBPACK_IMPORTED_MODULE_4__["default"])), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_footer_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        pages: pages,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 52
         },
         __self: this
       }));
@@ -6584,7 +6651,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*********************************!*\
   !*** multi ./pages/register.js ***!
   \*********************************/
@@ -6598,16 +6665,16 @@ return { page: module.exports.default }});
 
 /***/ }),
 
-/***/ "dll-reference dll_831a3634f66cb1dada0c":
+/***/ "dll-reference dll_088020044fcad06258c8":
 /*!*******************************************!*\
-  !*** external "dll_831a3634f66cb1dada0c" ***!
+  !*** external "dll_088020044fcad06258c8" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_831a3634f66cb1dada0c;
+module.exports = dll_088020044fcad06258c8;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
+},[[5,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=register.js.map
